@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wishes | Happy Birthday Celebration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-decor"></div>
+<main class="wishes-page">
+  
+</main>
+
+<nav class="navbar">
+  <a href="index.html" class="logo"> Happy Birthday Srishti ✨</a>
+  <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="memories.html">📸 Memories</a></li>
+    <li><a href="wishes.html" class="active">💌 Wishes</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════ GUESTBOOK ══════════════ -->
+<section>
+  <h2 class="section-title reveal">Guest Wishes 🌸</h2>
+  <p class="section-sub reveal">Leave a birthday wish below — it'll be saved right here on this page!</p>
+
+  <form id="guestForm" class="contact-form reveal">
+    <input type="text"  name="name"    placeholder="Your Name"              required>
+    <input type="email" name="email"   placeholder="Your Email (optional)">
+    <textarea           name="message" placeholder="Write your birthday wish..." rows="4" required></textarea>
+    <button type="submit" class="btn primary">Send Wish 💌</button>
+  </form>
+
+  
+  <div id="guestWishes" class="guest-wishes"></div>
+</section>
+
+<footer>
+  <div class="footer-title"> Happy Birthday — and many, many more!🌸 &amp; Forever 🎉</div>
+  <p>I don't know when I'll see you again, but I really hope that day comes soon. Until then, 
+    take care of yourself and keep that beautiful smile alive. I miss you more than I say. 🥹❤️”
+</p>
+  
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

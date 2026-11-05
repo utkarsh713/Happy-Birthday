@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memories | Happy Birthday Celebration</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Memories page background image -->
+<style>
+html {
+  min-height: 100%;
+  background: #2C0907;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  margin: 0;
+  background: transparent !important;
+}
+
+/* Fixed image stays behind the complete page while scrolling */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(20, 5, 5, 0.12),
+      rgba(20, 5, 5, 0.20)
+    ),
+    url("./assets/images/Backround2.png");
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Keep page content transparent so the image remains visible */
+.bg-decor,
+.memories-page,
+.memory-gallery-section,
+body > section,
+body > footer,
+.page-divider {
+  background-color: transparent !important;
+}
+
+/* Soft transparent navbar */
+.navbar {
+  background: rgba(44, 9, 7, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Mobile background positioning */
+@media (max-width: 600px) {
+  body::before {
+    background-position: 35% center;
+    background-size: cover;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-decor"></div>
+
+<main class="memories-page">
+</main>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">Srishti ✨</a>
+
+  <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="memories.html" class="active">Memories</a></li>
+    <li><a href="wishes.html">💌 Wishes</a></li>
+  </ul>
+</nav>
+
+<!-- MEMORY GALLERY -->
+<section class="memory-gallery-section" id="memoryGallery">
+
+  <h4 class="section-title reveal">Memory Gallery</h4>
+
+  <p class="section-sub reveal">
+    Just You, Being Your Beautiful Self 🌸
+  </p>
+
+  <div class="memory-grid">
+
+    <figure class="memory-item reveal">
+      <img src="assets/images/before now 1.png" alt="Memory 1">
+      <figcaption>Memory 1 ✨</figcaption>
+    </figure>
+
+    <figure class="memory-item reveal">
+      <img src="assets/images/photo2.png" alt="Memory 2">
+      <figcaption>Memory 2 💗</figcaption>
+    </figure>
+
+    <figure class="memory-item reveal">
+      <img src="assets/images/photo3.png" alt="Memory 3">
+      <figcaption>Memory 3 🌸</figcaption>
+    </figure>
+
+    <figure class="memory-item reveal">
+      <img src="assets/images/photo4.png" alt="Memory 4">
+      <figcaption>Memory 4 ✨</figcaption>
+    </figure>
+
+    <figure class="memory-item reveal">
+      <img src="assets/images/photo5.png" alt="Memory 5">
+      <figcaption>Memory 5 💖</figcaption>
+    </figure>
+
+    <figure class="memory-item reveal">
+      <img src="assets/images/photo6.png" alt="Memory 6">
+      <figcaption>Memory 6 🎀</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<div class="page-divider">💖 💖 💖 💖 💖</div>
+
+<section>
+  <h2 class="section-title reveal">A Little Note for You 🌸</h2>
+
+  <p class="section-sub reveal">
+    Got something sweet to say? Make her day a little more special.
+  </p>
+
+  <div class="cta-group">
+    <a href="wishes.html" class="btn primary">💖 Send Your Wishes</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-title">Stay Happy, Stay Beautiful 🌸</div>
+
+  <p>Some memories fade, but some people always remain special. ❤️✨</p>
+
+  <p>&copy; 2026 — Made with love, just for Srishti. 💕</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+
+  <button type="button" class="lightbox-close" id="lbClose" aria-label="Close photo viewer">&times;</button>
+
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
+
+  <figure class="lb-figure">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+
+  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next photo">›</button>
+
+</div>
+
+<!-- Memories-only soundtrack. Put your second MP3 at assets/music/memories-song.mp3 -->
+<audio id="memoriesAudio" preload="auto" loop playsinline>
+  <source src="assets/music/memories-song.mp3" type="audio/mpeg">
+</audio>
+<button type="button" id="memoriesMusicToggle" class="music-toggle memories-music-toggle"
+        aria-pressed="false" aria-label="Play memories music" title="Play memories music">🎵</button>
+
+<script src="js/script.js"></script>
+<script src="js/magic-effects.js"></script>
+</body>
+</html>

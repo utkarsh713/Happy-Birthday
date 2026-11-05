@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celebrate | Happy Birthday Celebration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-decor"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">✨ Happy Birthday</a>
+  <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="memories.html">📸 Memories</a></li>
+    <li><a href="wishes.html">💌 Wishes</a></li>
+    <li><a href="celebration.html" class="active">🎉 Celebrate</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" style="min-height:45vh;">
+  <h1>Celebration Time 🎉</h1>
+  <p class="section-sub reveal">Surprise · Fireworks · Music · Countdown — the grand finale starts here.</p>
+</section>
+
+<!-- ══════════════ SURPRISE ══════════════ -->
+<section class="surprise-wrap">
+  <h2 class="section-title reveal">A Little Surprise For You 🎁</h2>
+  <p class="section-sub reveal">Click the button below and let the celebration explode!</p>
+  <button id="surpriseBtn" class="surprise-btn">🎉 Start the Celebration 🎉</button>
+  <!-- visualizer bars built by JS -->
+  <div class="visualizer" style="margin-top:40px;"></div>
+</section>
+
+<div class="page-divider">✦ ✦ ✦ ✦ ✦</div>
+
+<!-- ══════════════ COUNTDOWN ══════════════ -->
+<section>
+  <h2 class="section-title reveal">Countdown ⏳</h2>
+  <p class="section-sub reveal">Time ticking — every second is a gift!</p>
+  <div class="countdown"></div>
+</section>
+
+<!-- ══════════════ CELEBRATION BUTTONS ══════════════ -->
+<section>
+  <h2 class="section-title reveal">Party Controls 🎛️</h2>
+  <p class="section-sub reveal">Hit any button to add more magic to the celebration.</p>
+  <div class="celebration-controls">
+    <button id="fireworksBtn">🎆 Launch Fireworks</button>
+    <button id="confettiBtn">🎊 Confetti Blast</button>
+    <button id="balloonBtn">🎈 Release Balloons</button>
+    <button id="giftBtn">🎁 Float Gifts</button>
+  </div>
+</section>
+
+<div class="page-divider">🎵 🎵 🎵 🎵 🎵</div>
+
+<!-- ══════════════ MUSIC PLAYER ══════════════ -->
+<section>
+  <h2 class="section-title reveal">Birthday Music 🎵</h2>
+  <p class="section-sub reveal">Place your MP3 file at <strong style="color:#ffd700;">assets/music/birthday-song.mp3</strong> and hit play!</p>
+
+  <!-- Hidden audio element -->
+  <audio id="bdayAudio" preload="auto">
+    <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <!-- Beautiful music player UI -->
+  <div class="music-player">
+    <span class="music-icon">🎂</span>
+    <div class="music-title">Happy Birthday Song</div>
+    <div class="music-artist">✨ Your Special Celebration Track</div>
+
+    <!-- Progress bar -->
+    <input type="range" class="music-progress" id="musicProgress" min="0" max="100" value="0">
+    <div class="music-time" id="musicTime">
+      <span>0:00</span><span>0:00</span>
+    </div>
+
+    <!-- Play / Pause buttons -->
+    <div class="music-controls">
+      <button class="music-btn play-pause" id="playPauseBtn" title="Play / Pause">▶</button>
+    </div>
+
+    <!-- Volume -->
+    <div class="volume-wrap">
+      <span>🔈</span>
+      <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.8">
+      <span>🔊</span>
+    </div>
+
+    <!-- Visualizer bars (built by JS) -->
+    <div class="visualizer"></div>
+
+    <!-- File placement hint -->
+    <div class="music-hint">
+      📁 <strong>How to add your music:</strong>
+      <code>birthday-v2/assets/music/birthday-song.mp3</code>
+      Place any MP3 file at that path, rename it <strong>birthday-song.mp3</strong>, and the player will work automatically.
+    </div>
+  </div>
+</section>
+
+<div class="page-divider">💖 💖 💖 💖 💖</div>
+
+<!-- ══════════════ THANK YOU ══════════════ -->
+<section>
+  <div style="text-align:center; padding:60px 20px; position:relative; z-index:1;">
+    <span class="heart-burst">💖</span>
+    <h1 class="section-title" style="font-size:clamp(2rem,6vw,4rem);">Thank You For Celebrating!</h1>
+    <p class="section-sub" style="margin-top:16px;">Thank you for being part of this special day. Your love, wishes and presence mean the world. Here's to many more beautiful years ahead! 🎂✨</p>
+    <div style="margin-top:40px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="index.html"   class="btn primary">🏠 Back to Home</a>
+      <a href="memories.html" class="btn">📸 View Memories</a>
+      <a href="wishes.html"   class="btn">💌 Read Wishes</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-title">🎉 Happy Birthday, Always &amp; Forever 🎉</div>
+  <p>Made with love, sparkles, and a whole lot of cake. 🎂✨</p>
+  <p>&copy; 2026 Happy Birthday Celebration. All rights reserved.</p>
+</footer>
+
+<div class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <div class="lightbox-content"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#2C0907">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Celebration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dob-lock">
+
+<!-- Background Decorations -->
+<div class="bg-decor"></div>
+
+<!-- ══════════════ DOB ENTRY OVERLAY ══════════════ -->
+<div id="dobOverlay">
+  <div class="dob-orb a"></div><div class="dob-orb b"></div>
+  <canvas id="dobAmbientCanvas"></canvas>
+  <div id="dobFloatLayer"></div>
+  <canvas id="dobConfettiCanvas"></canvas>
+  <form id="dobForm" novalidate autocomplete="off" aria-labelledby="dobTitle">
+    <h2 id="dobTitle">A Special Surprise Awaits You</h2>
+    <p class="dob-lead">Enter your date of birth to begin the celebration.</p>
+    <div class="dob-fields">
+      <div class="dob-field"><label for="dobDay">Day</label><input id="dobDay" name="day" type="text" inputmode="text" maxlength="30" placeholder="DD" required></div>
+      <div class="dob-field"><label for="dobMonth">Month</label><input id="dobMonth" name="month" type="text" inputmode="text" maxlength="30" placeholder="MM" required></div>
+      <div class="dob-field"><label for="dobYear">Year</label><input id="dobYear" name="year" type="text" inputmode="text" maxlength="30" placeholder="YYYY" required></div>
+    </div>
+    <p id="dobError" role="alert"></p>
+    <button type="submit" id="dobSubmit" class="dob-btn">Open My Surprise 🎁</button>
+  </form>
+</div>
+
+<!-- ══════════════ MAIN SITE (hidden until DOB is submitted) ══════════════ -->
+<div id="mainSite" inert>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">✨ Happy Birthday Srishti</a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="memories.html">Memories</a></li>
+      <li><a href="wishes.html">💌 Wishes</a></li>
+    </ul>
+  </nav>
+
+  <<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+    <div class="cake"></div>
+
+    <h1>Happy Birthday Pretty Girl! 💗</h1>
+
+    <p class="typing-text"
+       data-text="May your life be filled with happiness, success, and endless smiles.">
+    </p>
+
+    <div class="cta-group">
+        <a href="memories.html" class="btn">View Memories</a>
+    </div>
+
+    <!-- Scroll text: button ke just neeche -->
+    <p class="scroll-down-hint">Scroll down 👇</p>
+</section>
+  
+  <!-- DIGITAL GIFT -->
+  <section>
+    <h2 class="section-title reveal">A Little Surprise</h2>
+
+    <p class="section-sub reveal">
+      Teri life hamesha khushiyon, pyaar aur endless smiles se bhari rahe.
+      Tu hamesha aise hi shine karti reh, aur tere saare dreams sach ho jaayein. 🧿✨
+    </p>
+
+    <div class="about-grid">
+      <div class="glass-card reveal">
+        <div class="icon">🎁</div>
+        <h3>Surprises Inside</h3>
+        <p>
+          Today is special because the world was blessed with someone as kind
+          and beautiful as you. ❤️ No matter how life changes, I hope you always
+          keep smiling, achieve every dream, and never forget how special you are.
+          I'm truly grateful to have you in my life. 🥹
+        </p>
+      </div>
+
+      <div class="glass-card reveal">
+        <div class="icon">📸</div>
+        <h3>Beautiful Memories</h3>
+        <p>
+          Kuch moments chhote hote hain, par unki memories hamesha special rehti hain. 💗
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-divider">✦ ✦ ✦ ✦ ✦</div>
+
+  <!-- ══════════════ ABOUT ══════════════ -->
+  <section>
+    <h2 class="section-title reveal">Happy Birthday, my childhood friend! ⭐</h2>
+    <p class="section-sub reveal">Srishti, no matter how much time passes, you'll always be a special
+       part of my childhood memories. ❤️ May your life be filled with happiness, success,
+       and endless smiles. Keep shining and stay the wonderful person you are! 🌷✨</p>
+    <div class="about-grid">
+      <div class="glass-card reveal">
+        <div class="icon">😄</div>
+        <h3>Dosti 🌸</h3>
+        <p>Kuch dost zindagi mein kahani ban jaate hain,
+Milte hain kuch pal ke liye, par yaadgar ban jaate hain.
+Waqt badal jaata hai, raaste bhi alag ho jaate hain,
+Par sacche dost hamesha dil ke kareeb reh jaate hain.</p>
+         </div>
+  </section>
+          
+
+  <div class="page-divider">💖 💖 💖 💖 💖</div>
+
+  <!-- ══════════════ SPECIAL MESSAGE ══════════════ -->
+  <section>
+    <h2 class="section-title reveal">A Special Message 🌸 </h2>
+    <div class="message-wrap">
+      <p class="message-block letterize reveal active">Happy Birthday </p>
+      <p class="message-block reveal">Today is your day to <span class="shine">shine bright</span> and celebrate everything that makes you wonderfully you.</p>
+      <p class="message-block reveal">Pata nahi tu purane din yaad karti hai ya nahi, par main aaj bhi un yaadon ko smile ke saath yaad karta hoon.</p>
+      <p class="message-block reveal">Kuch log door hokar bhi dil ke bahut paas rehte hain, aur tu unmein se ek hai. Kabhi-kabhi bas mann karta hai ki tu saamne ho, hum baatein karte rahein Miss you yaar! 🫂💖</p>
+      <p class="message-block reveal"><span class="shine">Happy Birthday — and many, many more!</span> 🎉</p>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <div class="footer-title">🎉  Happy Birthday, Mere Yaar! ❤️ &amp; Forever 🎉</div>
+    <p>Made with pyaar, dosti aur thodi si pagalpan wali vibes. 💖✨</p>
+    <p>&copy; 2023 Happy Birthday Celebration. All rights reserved.</p>
+  </footer>
+
+  <button type="button" id="musicToggle" class="music-toggle" aria-pressed="false" aria-label="Play birthday music">🔇</button>
+</div><!-- /mainSite -->
+
+<!-- Birthday music (started by the DOB form) -->
+<audio id="bdayAudio" preload="auto">
+  <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/script.js"></script>
+<script src="js/magic-effects.js"></script>
+</body>
+</html>
